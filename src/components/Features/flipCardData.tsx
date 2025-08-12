@@ -19,7 +19,7 @@ const flipCardData = [
     id: 3,
     image: "/images/icons/lms.png", // Add your PNG image path here
     title: "Learning Management System",
-    subtitle: "Product",
+    subtitle: "Software",
     paragraph: "Empower learning with our robust Learning Management System—custom-built to deliver engaging, interactive, and trackable training experiences.",
   },
   {
