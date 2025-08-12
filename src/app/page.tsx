@@ -1,14 +1,14 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
+import AboutSectionOne from "../components/About/AboutSectionOne";
+import AboutSectionTwo from "../components/About/AboutSectionTwo";
+import ScrollUp from "../components/Common/ScrollUp";
+import Contact from "../components/Contact";
+import Features from "../components/Features";
+import Hero from "../components/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Nexergize Solution",
-  description: "This is Home for Nexergize Solution",
+  title: "Nexergize | Innovating the Future of Tech",
+  description: "Nexergize turns ideas into impact with cutting-edge web & app development, LMS products, AI solutions, and end-to-end hosting services.",
   // other metadata
 };
 

@@ -2,6 +2,7 @@
 
 import React from "react";
 import flipCardData from "./flipCardData";
+import Image from "next/image";
 
 type BentoItem = {
   title: string;
@@ -26,14 +27,35 @@ const Features = () => {
         @keyframes drift{0%{transform:translateX(-10px)translateY(0)scale(.8);opacity:.3}50%{transform:translateX(10px)translateY(-8px)scale(1.2);opacity:.6}100%{transform:translateX(-5px)translateY(0)scale(.8);opacity:.3}}
         @keyframes rise{0%{transform:translateY(0);opacity:0}50%{opacity:.6}100%{transform:translateY(-100px);opacity:0}}
         @keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:.6;transform:scale(1.05)}}
+        
+        /* Fixed position animations */
+        .particle-1 { left: 10%; top: 20%; animation: float 5s ease-in-out infinite 0.5s; }
+        .particle-2 { left: 80%; top: 15%; animation: float 4s ease-in-out infinite 1s; }
+        .particle-3 { left: 60%; top: 70%; animation: float 6s ease-in-out infinite 1.5s; }
+        .particle-4 { left: 30%; top: 80%; animation: float 4.5s ease-in-out infinite 0.8s; }
+        .particle-5 { left: 90%; top: 60%; animation: float 5.5s ease-in-out infinite 2s; }
+        .particle-6 { left: 15%; top: 45%; animation: float 3.8s ease-in-out infinite 0.3s; }
+        .particle-7 { left: 70%; top: 25%; animation: float 4.2s ease-in-out infinite 1.8s; }
+        .particle-8 { left: 40%; top: 90%; animation: float 5.2s ease-in-out infinite 1.2s; }
+        
+        .drift-1 { left: 25%; top: 35%; animation: drift 6s linear infinite 1s; }
+        .drift-2 { left: 75%; top: 50%; animation: drift 5s linear infinite 2s; }
+        .drift-3 { left: 50%; top: 75%; animation: drift 7s linear infinite 0.5s; }
+        .drift-4 { left: 10%; top: 65%; animation: drift 5.5s linear infinite 1.5s; }
+        .drift-5 { left: 85%; top: 30%; animation: drift 6.5s linear infinite 2.5s; }
+        
+        .rise-1 { left: 20%; animation: rise 6s linear infinite 1s; }
+        .rise-2 { left: 60%; animation: rise 7s linear infinite 2s; }
+        .rise-3 { left: 40%; animation: rise 5s linear infinite 0.5s; }
+        .rise-4 { left: 80%; animation: rise 8s linear infinite 3s; }
       `}</style>
       
       <section className="py-16 md:py-20 lg:py-20 from-gray-900 via-slate-900 to-black">
-        <div className="container mx-auto px-4 max-w-7xl">
+        <div className="container mx-auto px-4">
           <div className="mb-16">
             <div className="text-start mb-4">
               <span className="inline-block px-4 py-2 bg-indigo-900/50 text-indigo-400 text-sm font-semibold rounded-full uppercase tracking-wide border border-indigo-800/30">
-                OUR EXPERTISE
+                OUR SERVICES
               </span>
             </div>
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
@@ -44,8 +66,8 @@ const Features = () => {
               </div>
               <div className="lg:w-1/2">
                 <p className="text-lg text-gray-400 leading-relaxed">
-                  Our team of AI specialists has extensive experience in developing
-                  and implementing AI solutions across various industries.
+                  Our team of experts brings years of experience in crafting 
+                  high-impact websites and mobile apps that drive results across industries.
                 </p>
               </div>
             </div>
@@ -59,28 +81,20 @@ const Features = () => {
               >
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                   <div className="absolute inset-0">
-                    {[...Array(15)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="absolute w-1 h-1 bg-white rounded-full opacity-60"
-                        style={{
-                          left: `${Math.random() * 100}%`,
-                          top: `${Math.random() * 100}%`,
-                          animation: `float ${3 + Math.random() * 4}s ease-in-out infinite ${Math.random() * 2}s`,
-                        }}
-                      />
-                    ))}
-                    {[...Array(10)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="absolute w-2 h-2 bg-indigo-400 rounded-full opacity-30 blur-sm"
-                        style={{
-                          left: `${Math.random() * 100}%`,
-                          top: `${Math.random() * 100}%`,
-                          animation: `drift ${4 + Math.random() * 3}s linear infinite ${Math.random() * 3}s`,
-                        }}
-                      />
-                    ))}
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-1" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-2" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-3" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-4" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-5" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-6" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-7" />
+                    <div className="absolute w-1 h-1 bg-white rounded-full opacity-60 particle-8" />
+                    
+                    <div className="absolute w-2 h-2 bg-indigo-400 rounded-full opacity-30 blur-sm drift-1" />
+                    <div className="absolute w-2 h-2 bg-indigo-400 rounded-full opacity-30 blur-sm drift-2" />
+                    <div className="absolute w-2 h-2 bg-indigo-400 rounded-full opacity-30 blur-sm drift-3" />
+                    <div className="absolute w-2 h-2 bg-indigo-400 rounded-full opacity-30 blur-sm drift-4" />
+                    <div className="absolute w-2 h-2 bg-indigo-400 rounded-full opacity-30 blur-sm drift-5" />
                   </div>
                   
                   <div 
@@ -92,26 +106,21 @@ const Features = () => {
                   />
                   
                   <div className="absolute inset-0">
-                    {[...Array(8)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="absolute w-1 h-1 bg-purple-300 rounded-full opacity-40"
-                        style={{
-                          left: `${Math.random() * 100}%`,
-                          top: '100%',
-                          animation: `rise ${5 + Math.random() * 3}s linear infinite ${Math.random() * 4}s`,
-                        }}
-                      />
-                    ))}
+                    <div className="absolute w-1 h-1 bg-purple-300 rounded-full opacity-40 rise-1" style={{ top: '100%' }} />
+                    <div className="absolute w-1 h-1 bg-purple-300 rounded-full opacity-40 rise-2" style={{ top: '100%' }} />
+                    <div className="absolute w-1 h-1 bg-purple-300 rounded-full opacity-40 rise-3" style={{ top: '100%' }} />
+                    <div className="absolute w-1 h-1 bg-purple-300 rounded-full opacity-40 rise-4" style={{ top: '100%' }} />
                   </div>
                 </div>
 
                 <div className="relative z-10">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-900/50 p-3">
-                      <img
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-indigo-900/50 p-3">
+                      <Image
                         src={feature.image}
                         alt={feature.title}
+                        width={64}
+                        height={64}
                         className="w-full h-full object-contain"
                       />
                     </div>

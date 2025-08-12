@@ -1,20 +1,33 @@
 import React from 'react';
+import Image from "next/image";
 
 const CryptoHero = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden">
+    <section className="relative overflow-hidden py-16 md:py-20">
+      <div className="container mx-auto px-4">
+        {/* Centered Badge */}
+        <div className="text-start mb-3">
+          <span className="px-6 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 text-sm font-medium backdrop-blur-sm">
+            ABOUT US
+          </span>
+        </div>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          {/* Left Content */}
-          <div className="space-y-8 p-6">
-            {/* Badge */}
-            <div className="inline-flex">
-              <span className="px-6 py-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 text-sm font-medium backdrop-blur-sm">
-                GROW YOUR BUSINESS
-              </span>
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Right Content - Image (First on mobile, second on desktop) */}
+          <div className="relative order-1 lg:order-2">
+            <div className="max-w-md mx-auto lg:ml-40">
+              <Image 
+                src="/images/about.png"
+                alt="Digital Innovation"
+                width={400}
+                height={360}
+                className="w-full h-90 rounded-xl"
+              />
             </div>
+          </div>
 
+          {/* Left Content - Text (Second on mobile, first on desktop) */}
+          <div className="space-y-6 p-6 order-2 lg:order-1">
             {/* Main Heading */}
             <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-white leading-tight">
               Your Gateway to Digital
@@ -26,25 +39,12 @@ const CryptoHero = () => {
 
             {/* Description */}
             <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-              At Nexergize, we're dedicated to empowering businesses to thrive in the 
+              At Nexergize, we&apos;re dedicated to empowering businesses to thrive in the 
               dynamic world of digital transformation and technology. Our team combines 
               deep technical expertise with innovative strategies to deliver cutting-edge 
-              solutions that drive growth and impact. Whether you're launching a 
+              solutions that drive growth and impact. Whether you&apos;re launching a 
               new platform, building a decentralized application.
             </p>
-
-
-          </div>
-
-          {/* Right Content - Clean Image */}
-          <div className="relative">
-            <div className="max-w-md ml-auto">
-              <img 
-                src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Digital Innovation"
-                className="w-full h-auto rounded-2xl shadow-2xl"
-              />
-            </div>
           </div>
         </div>
       </div>

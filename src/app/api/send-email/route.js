@@ -18,14 +18,15 @@ export async function POST(req) {
 
     // Send mail
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: `"Nexergize" <${process.env.SMTP_USER}>`, // Replace "Your Site Name" with your actual site name
+      replyTo: `"${name}" <${email}>`, // This makes replies go to the original sender
       to: process.env.RECEIVER_EMAIL,
-      subject,
+      subject: `New Contact: ${subject} (from ${name})`, // Very clear subject line
       text: message,
       html: `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Email:</strong> ${phone}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
     });

@@ -56,7 +56,7 @@ const Contact = () => {
               </span>
             </h1>
             <p className="text-gray-400 text-lg leading-relaxed mb-8">
-              We'd love to hear from you. Our team is ready to help you with your AI solutions and answer any questions you might have.
+              We&apos;re here to turn your ideas into powerful websites, apps, and digital experiences. Our team is ready to guide you every step of the way.
             </p>
           </div>
 
@@ -121,7 +121,7 @@ const Contact = () => {
             {/* Phone and Subject Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <label className="block text-white font-medium mb-3">Phone (Optional)</label>
+                <label className="block text-white font-medium mb-3">Phone</label>
                 <input
                   type="tel"
                   name="phone"

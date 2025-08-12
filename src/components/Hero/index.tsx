@@ -47,11 +47,11 @@ export default function Hero() {
               />
             </path>
           </svg>
-          New Background
+          Your Vision, Our Innovation
         </span>
 
         <h1 className="mb-6 text-4xl font-extrabold text-white sm:text-5xl lg:text-6xl">
-          Bring the Arctic to you, with <br /> one line of code
+          Build. Grow. Succeed <br /> One Stop. Zero Limits
         </h1>
       </div>
     </section>
